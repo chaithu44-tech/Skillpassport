@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKILL PASSPORT | AI-Powered Career Intelligence & Skill Development Platform</title>
+  <meta name="description" content="Discover your strengths, identify skill gaps, and build a personalized career roadmap with AI-powered career intelligence.">
+  
+  <!-- Favicon / SVG Logo Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237C5CFC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'/><path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/></svg>">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0B0F19',
+              bgSecondary: '#111827',
+              card: '#172033',
+              purple: '#7C5CFC',
+              cyan: '#22D3EE',
+              success: '#22C55E',
+              warning: '#F59E0B',
+              danger: '#EF4444',
+              text: '#F9FAFB',
+              muted: '#9CA3AF'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/static/css/custom.css">
+</head>
+<body class="bg-[#0B0F19] text-[#F9FAFB] min-h-screen relative antialiased selection:bg-[#7C5CFC] selection:text-white">
+
+  <!-- Radial Background Lighting -->
+  <div class="ambient-glow bg-[#7C5CFC] top-[-100px] left-[-100px]"></div>
+  <div class="ambient-glow bg-[#22D3EE] top-[30%] right-[-150px]"></div>
+  <div class="ambient-glow bg-[#7C5CFC] bottom-[-150px] left-[20%]"></div>
+
+  <!-- Announcement Bar (Dynamic from Platform Settings) -->
+  <div id="announcement-banner" class="hidden relative z-50 bg-gradient-to-r from-[#7C5CFC]/20 via-[#22D3EE]/20 to-[#7C5CFC]/20 border-b border-[#7C5CFC]/30 text-xs text-center py-2 px-4 text-[#22D3EE] font-medium backdrop-blur-md">
+    <span id="announcement-text">Welcome to Skill Passport 1.0! Upload your resume to discover your AI career roadmap.</span>
+    <button onclick="document.getElementById('announcement-banner').classList.add('hidden')" class="ml-3 text-slate-400 hover:text-white">&times;</button>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header id="main-navbar" class="sticky top-0 z-40 glass-nav transition-all duration-200"></header>
+
+  <!-- SPA Content Root -->
+  <main id="app" class="relative z-10 flex flex-col min-h-[calc(100vh-64px)]"></main>
+
+  <!-- Global Footer -->
+  <footer id="main-footer" class="relative z-10 border-t border-white/5 bg-[#080B12] text-[#9CA3AF] text-sm py-12"></footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 pointer-events-none"></div>
+
+  <!-- Modal Dialog Container -->
+  <div id="modal-container" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4"></div>
+
+  <!-- Main Application Script (ES Module) -->
+  <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
